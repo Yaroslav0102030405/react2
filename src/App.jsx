@@ -2,16 +2,20 @@ import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
+import paintings from './assets/painting.json';
 
 import User from './assets/components/User/User';
+import Panel from './assets/components/Panel/Panel';
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
+      <Panel title="Новини">{/* <h1>Привіт!</h1> */}</Panel>
+      <Panel>{/* <h1>Привіт!</h1> */}</Panel>
       <div>
-        <User />
+        <User items={paintings} />
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
